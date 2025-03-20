@@ -1,0 +1,118 @@
+body {
+  background-color: #212323;
+  background-image: linear-gradient(90deg, #202023 0%, #372445 50%, #412e2e 100%);
+}
+
+.tabs-container {
+  width: 80%;
+  margin: auto;
+  border: 2px solid #120e0e;
+  padding: 10px;
+}
+
+/* Centered header */
+.header {
+  text-align: center;
+  margin-top: 200px;
+  color: white;
+}
+
+/* Wrapper to position tabs and add button */
+.tabs-header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #ddd;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+/* Tabs container allows scrolling */
+.tabs-header {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  scrollbar-width: thin; /* for Firefox */
+  padding-bottom: 5px;
+}
+
+/* Styling scrollbar for WebKit */
+.tabs-header::-webkit-scrollbar {
+  height: 6px;
+}
+
+.tabs-header::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 3px;
+}
+
+/* Individual tab styling */
+.tab {
+  padding: 10px 15px;
+  cursor: pointer;
+  background: rgb(180, 180, 238);
+  margin-right: 5px;
+  border-radius: 5px 5px 0 0;
+  position: relative;
+  flex-shrink: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.tab.active {
+  background: rgb(180, 180, 238);
+  border: 2px solid #000;
+  border-bottom: none;
+}
+
+/* Close button for tabs */
+.close-btn {
+  margin-left: 8px;
+  cursor: pointer;
+  color: rgb(18, 15, 15);
+  font-weight: bold;
+}
+
+/* "+ Add Tab" button aligned to right */
+.add-tab {
+  padding: 5px 10px;
+  background: rgb(117, 75, 224);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  white-space: nowrap;
+}
+
+/* Content container */
+.tab-content {
+  padding: 15px;
+  border: 2px solid #1b1717;
+  background: #dbdfe0;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .tab {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .add-tab {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .tab {
+    padding: 6px 8px;
+    font-size: 10px;
+  }
+
+  .add-tab {
+    padding: 3px 6px;
+    font-size: 10px;
+  }
+}
